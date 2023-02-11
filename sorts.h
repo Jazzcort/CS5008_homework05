@@ -13,7 +13,16 @@
 // Output: The index in an array of the minimum value between a range [start,stop]
 int findMinimum(int *array, int start, int stop)
 {
-    return 0; // modify to return the index of the min value
+    int mini_index = start;
+    int i;
+
+    for (i = start + 1; i <= stop; i++) {
+        if (array[i] < array[mini_index]) {
+            mini_index = i;
+        }
+    }
+
+    return mini_index;
 }
 
 
@@ -30,7 +39,11 @@ int findMinimum(int *array, int start, int stop)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void selectionSortIntegers(int *array, unsigned int size, int print)
 {
-    // todo: implement selection sort
+    int i;
+
+    for (i = 0; i < size - 1; i++) {
+        swap(&array[i], &array[findMinimum(array, i, size - 1)]);
+    }
 }
 
 /***  Code for Insertion Sort ***/
@@ -48,8 +61,24 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void insertionSortIntegers(int *array, unsigned int size, int print)
 {
-    // TODO: Implement insertion sort
- 
+    int i, j;
+
+    for (i = 0; i < size; i++) {
+        int tmp = array[i];
+        
+        for (j = i - 1; j >= -1; j--) {
+            if (array[i] > array[j] || j == -1) {
+                int k;
+                for (k = i; k > j + 1; k--) {
+                    array[k] = array[k - 1];
+                }
+
+                array[j + 1] = tmp;
+                break;
+                
+            }
+        }
+    }
 
 }
 
@@ -68,8 +97,15 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
 //           be modified to store a sorted array of size.
 void bubbleSortIntegers(int *array, unsigned int size, int print)
 {
-    // code generated from lab
-
+   int i, j;
+   for (i = 0; i < size - 1; i++) {
+    for (j = 0; j < size - 1; j++) {
+        if (array[j] > array[j + 1]) {
+            swap(&array[j], &array[j + 1]);
+        }
+    }
+   }
+   
 }
 
 // ** You will work on merge sort during the lab on Module 06 ** //
@@ -84,10 +120,35 @@ void merge(int arr[], int temp[], int l, int m, int r)
         exit(1);
     }
 
-    if (l > m || m + 1 > r)
+    if (l > m || m + 1 > r) {
         return;
+    }
 
+    int i, a, b;
+    a = l;
+    b = m + 1;
 
+    for (i = l; i <= r; i++) {
+        if (a <= m && b <= r) {
+            if (arr[a] < arr[b]) {
+                temp[i] = arr[a];
+                a += 1;
+            } else {
+                temp[i] = arr[b];
+                b += 1;
+            }
+        } else if (a <= m) {
+            temp[i] = arr[a];
+            a += 1;
+        } else if (b <= r) {
+            temp[i] = arr[b];
+            b += 1;
+        }
+    }
+
+    for (i = l; i <= r; i++) {
+        arr[i] = temp[i];
+    }
 }
 
 // To be built during week 6 lab
@@ -101,7 +162,15 @@ void merge(int arr[], int temp[], int l, int m, int r)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void merge_sort(int arr[], int temp[], int l, int r)
 {
-   
+    if (l == r) {
+        return;
+    }
+    int middle = (l + r) / 2;
+
+    merge_sort(arr, temp, l, middle);
+    merge_sort(arr, temp, middle + 1, r);
+    merge(arr, temp, l, middle, r);
+
 }
 
 // lab build, merge sort
