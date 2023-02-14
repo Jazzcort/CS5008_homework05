@@ -51,9 +51,10 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
         if (print == 1) {
             printIntArray(array, size);
         }
-
     }
-
+    if (print == 1) {
+        printIntArray(array, size);
+    }
 }
 
 /***  Code for Insertion Sort ***/
