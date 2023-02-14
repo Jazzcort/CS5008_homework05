@@ -43,6 +43,10 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
 
     for (i = 0; i < size - 1; i++) {
         swap(&array[i], &array[findMinimum(array, i, size - 1)]);
+
+        if (print == 1) {
+            printIntArray(array, size);
+        }
     }
 }
 
@@ -78,6 +82,9 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
                 
             }
         }
+        if (print == 1) {
+            printIntArray(array, size);
+        }
     }
 
 }
@@ -103,6 +110,10 @@ void bubbleSortIntegers(int *array, unsigned int size, int print)
         if (array[j] > array[j + 1]) {
             swap(&array[j], &array[j + 1]);
         }
+    }
+
+    if (print == 1) {
+        printIntArray(array, size);
     }
    }
    
@@ -187,6 +198,9 @@ void mergeSortIntegers(int *array, unsigned int size, int print)
     int *temp = (int *)malloc(sizeof(int) * size);
     merge_sort(array, temp, 0, size - 1);
     free(temp);
+    if (print == 1) {
+        printIntArray(array, size);
+    }
 }
 
 // provided code 
