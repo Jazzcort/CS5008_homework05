@@ -43,11 +43,12 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
 
     for (i = 0; i < size - 1; i++) {
         swap(&array[i], &array[findMinimum(array, i, size - 1)]);
+        if (print == 1) {
+            printIntArray(array, size);
+        }
 
     }
-    if (print == 1) {
-            printIntArray(array, size);
-    }
+
 }
 
 /***  Code for Insertion Sort ***/
@@ -67,7 +68,7 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
 {
     int i, j;
 
-    for (i = 0; i < size; i++) {
+    for (i = 1; i < size; i++) {
         int tmp = array[i];
         
         for (j = i - 1; j >= -1; j--) {
