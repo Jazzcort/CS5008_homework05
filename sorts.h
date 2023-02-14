@@ -39,6 +39,11 @@ int findMinimum(int *array, int start, int stop)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void selectionSortIntegers(int *array, unsigned int size, int print)
 {
+    if (size == 0) {
+        return;
+    }
+
+
     int i;
 
     for (i = 0; i < size - 1; i++) {
@@ -66,6 +71,10 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void insertionSortIntegers(int *array, unsigned int size, int print)
 {
+    if (size == 0) {
+        return;
+    }
+
     int i, j;
 
     for (i = 1; i < size; i++) {
@@ -189,6 +198,11 @@ void merge_sort(int arr[], int temp[], int l, int r)
 
 void mergeSortIntegers(int *array, unsigned int size, int print)
 { // print is ignored for this one
+    if (size == 0) {
+        return;
+    }
+
+
     if (array == NULL)
     {
         exit(1);
