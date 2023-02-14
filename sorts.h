@@ -44,9 +44,9 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
     for (i = 0; i < size - 1; i++) {
         swap(&array[i], &array[findMinimum(array, i, size - 1)]);
 
-        if (print == 1) {
+    }
+    if (print == 1) {
             printIntArray(array, size);
-        }
     }
 }
 
