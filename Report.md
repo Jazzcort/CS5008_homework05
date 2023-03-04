@@ -133,6 +133,8 @@ Therefore, Selection Sort is unstable.
 ### 6.2 When stability is needed?
 Explain in your own words a case in which you will want a stable algorithm over an unstable. Include an example. 
 
+We choose a stable algorithm over an unstable algorithm when we want to sort a data which already has some order to it and we want to keep that order after we apply the sort algorithm. For example, when we are going to sort a list of students which is already sorted by their name alphabetically by their grades, and we want to keep the sorted order of the names after we apply the sort algorithm to sort the list by grade. In this situation, we would choose stable sort algorithm.
+
 ### 7. Gold Thief
 
 You are planning a heist to steal a rare coin that weighs 1.0001 ounces. The problem is that the rare coin was mixed with a bunch of counter fit coins. You know the counter fit coins only weight 1.0000 ounce each. There are in total 250 coins.  You have a simple balance scale where the coins can be weighed against each other. Hint: don't think about all the coins at once, but how you can break it up into even(ish) piles. 
