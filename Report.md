@@ -117,17 +117,13 @@ Merge sort is a stable sort algorithm, because when we're merging two sorted sub
 Selection sort is unstable sort algorithm, becuse the order of identical elements to each other might change.
 For emample:
 
-       "a" "b"
+```test       
+Step 1: 2:"a"  2:"b"  1     
 
-Step 1: 2   2   1
+Step 2: 1      2:"b"  2:"a"
 
-           "b" "a"
-
-Step 2: 1   2   2
-
-           "b" "a"
-           
-Step 3: 1   2   2
+Step 3: 1   2:"b"   2:"a"
+```
 
 Therefore, Selection Sort is unstable.
 
