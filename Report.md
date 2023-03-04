@@ -73,7 +73,7 @@ Merge > Quick > Bubble = Selection = Insertion
 
 | Merge | Quick | Bubble |Selection | Insertion |
 | :--: | :--: | :--: | :--: | :--: |
-| $O(n)$ | |$O(log(n))$ | $O(1)$ | $O(1)$ | $O(1)$|
+| $O(n)$ | $O(log(n))$ | $O(1)$ | $O(1)$ | $O(1)$ | 
 
 ### 4. Growth of Functions
 Give the following values, place them correctly into *six* categories. Use the bullets, and feel free to cut and paste the full LatexMath we used to generate them.  
@@ -92,7 +92,7 @@ $2^{(n-1)}$
 * $O(n!)$: $n!$
 * $O(2^{n})$: $2^n$, $2^{(n-1)}$
 * $O(n^2)$: $n^2$, $5n^2+5n$
-* $O(nlog(n))$: $n\log_2n$
+* $O(n\log(n))$: $n\log_2n$
 * $O(n)$: $3n$, $100n$
 * $O(1)$: $100$, $10000$
 
@@ -103,13 +103,13 @@ Pair the following terms with the correct function in the table.
 
 | Big $O$     |  Name  |
 | ------      | ------ |
-| $O(n^3)$    |  your answer here |
-| $O(1)$      |   |
-| $O(n)$      |   |
-| $O(\log_2n)$ |   |
-| $O(n^2)$    |   |
-| $O(n!)$     |   |
-| $O(2^n)$    |   |
+| $O(n^3)$    |  Cubic |
+| $O(1)$      | Constant |
+| $O(n)$      | Linear |
+| $O(\log_2n)$ | Logarithmic |
+| $O(n^2)$    | Quadratic |
+| $O(n!)$     | Factorial |
+| $O(2^n)$    | Exponential |
 
 
 
