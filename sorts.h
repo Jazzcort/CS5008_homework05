@@ -152,7 +152,7 @@ void merge(int arr[], int temp[], int l, int m, int r)
 
     for (i = l; i <= r; i++) {
         if (a <= m && b <= r) {
-            if (arr[a] < arr[b]) {
+            if (arr[a] <= arr[b]) {
                 temp[i] = arr[a];
                 a += 1;
             } else {

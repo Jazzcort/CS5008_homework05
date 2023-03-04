@@ -46,10 +46,6 @@ Build another table that presents the best, worst, and average case for Bubble, 
 
 The Bubble Sort introduceed in the class video doesn't check if at least a swap is done in the second for-loop. So, even if the given array is already sorted, this version of Bubble Sort still run through the whole array. Therefore, the best case time complexity is still $O(n^{2})$
 
-#### Reference
-Woltmann, S. (2022, July 19). Insertion sort - algorithm, source code, Time Complexity. HappyCoders.eu. Retrieved March 4, 2023, from https://www.happycoders.eu/algorithms/insertion-sort/ 
-
-
 #### 3.2 Worst Case
 Provide example of arrays that generate _worst_ case for Bubble, Selection, Insertion, Merge Sorts
 
@@ -114,8 +110,21 @@ Pair the following terms with the correct function in the table.
 
 
 ### 6. Stable vs Unstable
-Look up stability as it refers to sorting. In your own words, describe one sort that is stable and one sort that isn't stable  
+Look up stability as it refers to sorting. In your own words, describe one sort that is stable and one sort that isn't stable 
 
+Merge sort is a stable sort algorithm, because when we're merging two sorted subarrays, if the value from left subarray is equal to the value from right subarray, the element in the left subarray is always placed first. Therefore, the order of identical elements to each other always remains unchanged.
+
+Selection sort is unstable sort algorithm, becuse the order of identical elements to each other might change.
+For emample:
+
+       "a" "b"
+Step 1: 2   2   1
+           "b" "a"
+Step 2: 1   2   2
+           "b" "a"
+Step 3: 1   2   2
+
+Therefore, Selection Sort is unstable.
 
 ### 6.2 When stability is needed?
 Explain in your own words a case in which you will want a stable algorithm over an unstable. Include an example. 
@@ -127,8 +136,15 @@ You are planning a heist to steal a rare coin that weighs 1.0001 ounces. The pro
 #### 7.1 Algorithm
 Describe an algorithm that will help you find the coin. We encourage you to use pseudo-code, but not required.
 
+Divide the coins into two piles, and weigh them. Choose the heavier pile and repeat the same process. At the end, the heavier one in the last two coins is the rare coin.
+
 #### 7.2 Time Complexity
 What is the average time complexity of your algorithm? 
+
+The algorithm is ultilzing the concept of binary search to find the coin, so the average time complexity would be $O(log(n))$
+
+### Reference
+Woltmann, S. (2022, July 19). Insertion sort - algorithm, source code, Time Complexity. HappyCoders.eu. Retrieved March 4, 2023, from https://www.happycoders.eu/algorithms/insertion-sort/ 
 
 
 
