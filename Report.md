@@ -24,6 +24,9 @@ Build a line chart using your favorite program. Your X axis will be N increasing
 
 Include the image in your markdown. As a reminder, you save the image in your repo, and use [image markdown].
 
+<img src="https://github.com/Jazzcort/CS5008_homework05/blob/main/chart.png" width="600" height="420"> <br>
+
+
 
 
 ### 2. Convinced?
