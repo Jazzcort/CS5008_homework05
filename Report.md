@@ -38,11 +38,11 @@ In the chart, we can observe that Bubble, Selection, and Insertion Sort shows th
 ### 3. Big O
 Build another table that presents the best, worst, and average case for Bubble, Selection, Insertion, Merge, and Quick. You are free to use resources for this, but please reference them if you do. 
 
-| - | Bubble | Selection | Insertion | Merge | Quick |
+|  | Bubble | Selection | Insertion | Merge | Quick |
 | :-- | :--: | :--: | :--: | :--: | :--: |
-| Best Case | | | | | |
-| Worst Case | | | | | |
-| Average Case | | | | | |
+| Best Case | | | $O(n)$ | | |
+| Worst Case | | | $O(n^{2})$ | | |
+| Average Case | | | | $O(n^2)$ | |
 
 
 #### 3.2 Worst Case
