@@ -118,10 +118,15 @@ Selection sort is unstable sort algorithm, becuse the order of identical element
 For emample:
 
        "a" "b"
+
 Step 1: 2   2   1
+
            "b" "a"
+
 Step 2: 1   2   2
+
            "b" "a"
+           
 Step 3: 1   2   2
 
 Therefore, Selection Sort is unstable.
