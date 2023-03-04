@@ -40,7 +40,7 @@ Build another table that presents the best, worst, and average case for Bubble, 
 
 |  | Bubble | Selection | Insertion | Merge | Quick |
 | :-- | :--: | :--: | :--: | :--: | :--: |
-| Best Case | | $O(n^{2})$ | $O(n)$ | $O(nlog(n))$ | |
+| Best Case | | $O(n^{2})$ | $O(n)$ | $O(n\cdotlog(n))$ | |
 | Worst Case | | $O(n^{2})$ | $O(n^{2})$ | | |
 | Average Case | | $O(n^{2})$ | $O(n^2)$ |  | |
 
