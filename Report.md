@@ -40,21 +40,40 @@ Build another table that presents the best, worst, and average case for Bubble, 
 
 |  | Bubble | Selection | Insertion | Merge | Quick |
 | :-- | :--: | :--: | :--: | :--: | :--: |
-| Best Case | | $O(n^{2})$ | $O(n)$ | $O(n(log(n)))$ | |
-| Worst Case | | $O(n^{2})$ | $O(n^{2})$ | $O(nlog(n))$ | |
-| Average Case | | $O(n^{2})$ | $O(n^2)$ | $O(nlog(n))$ | |
+| Best Case | $O(n^{2})$ | $O(n^{2})$ | $O(n)$ | $O(n\log(n))$ | $O(n\log(n))$ |
+| Worst Case | $O(n^{2})$ | $O(n^{2})$ | $O(n^{2})$ | $O(n\log(n))$ | $O(n\log(n))$ |
+| Average Case | $O(n^{2})$ | $O(n^{2})$ | $O(n^2)$ | $O(n\log(n))$ | $O(n^{2})$ |
+
+The Bubble Sort introduceed in the class video doesn't check if at least a swap is done in the second for-loop. So, even if the given array is already sorted, this version of Bubble Sort still run through the whole array. Therefore, the best case time complexity is still $O(n^{2})$
+
+#### Reference
+Woltmann, S. (2022, July 19). Insertion sort - algorithm, source code, Time Complexity. HappyCoders.eu. Retrieved March 4, 2023, from https://www.happycoders.eu/algorithms/insertion-sort/ 
 
 
 #### 3.2 Worst Case
 Provide example of arrays that generate _worst_ case for Bubble, Selection, Insertion, Merge Sorts
 
+The worst case would be a sorted array in descending order.
+
+For example: 9, 8, 7, 6, 5, 4, 3, 2, 1
+
 
 #### 3.3 Best Case
 Provide example of arrays that generate _best_ case for Bubble, Selection, Insertion, Merge Sorts 
 
+The best case would be a sorted array in accending order.
+
+For example: 1, 2, 3, 4, 5, 6, 7, 8, 9 
+
 
 #### 3.4 Memory Considerations
 Order the various sorts based on which take up the most memory when sorting to the least memory. You may have to research this, and include the mathematical notation. 
+
+Merge > Quick > Bubble = Selection = Insertion
+
+| Merge | Quick | Bubble |Selection | Insertion |
+| :--: | :--: | :--: | :--: | :--: |
+| $O(n)$ | |$O(log(n))$ | $O(1)$ | $O(1)$ | $O(1)$|
 
 ### 4. Growth of Functions
 Give the following values, place them correctly into *six* categories. Use the bullets, and feel free to cut and paste the full LatexMath we used to generate them.  
@@ -70,12 +89,12 @@ $2^n$
 $100n$  
 $2^{(n-1)}$
 #### Categories
-* 
-*
-*
-*
-*
-*
+* $O(n!)$: $n!$
+* $O(2^{n})$: $2^n$, $2^{(n-1)}$
+* $O(n^2)$: $n^2$, $5n^2+5n$
+* $O(nlog(n))$: $n\log_2n$
+* $O(n)$: $3n$, $100n$
+* $O(1)$: $100$, $10000$
 
 ### 5. Growth of Function Language
 
