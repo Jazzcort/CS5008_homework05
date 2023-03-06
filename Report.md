@@ -55,9 +55,9 @@ The worst case for Bubble and Insertion Sorts would be a sorted array in descend
 
 For example: 9, 8, 7, 6, 5, 4, 3, 2, 1
 
-If we use Bubble Sort to sort this array, in the second for loop, we have to swap every two elements since the first element is always bigger than the second element in a descending array.
+If we use Bubble Sort to sort this array, in the second for-loop, we have to swap every two elements since the first element is always bigger than the second element in a descending array.
 
-If we use Insertion Sort, we have to compare the "i"th element from "i - 1"th to the 1st element every time for every insertion since the elements with bigger index number is smaller than the elements with smaller index number in a descending array.
+If we use Insertion Sort, we have to compare the "i"th element from "i - 1"th to the 1st element for every insertion since the elements with bigger index number is smaller than the elements with smaller index number in a descending array.
 
 #### 3.3 Best Case
 Provide example of arrays that generate _best_ case for Bubble, Selection, Insertion, Merge Sorts 
@@ -68,9 +68,9 @@ The best case for Bubble and Insertion Sort would be a sorted array in accending
 
 For example: 1, 2, 3, 4, 5, 6, 7, 8, 9
 
-If we apply Bubble to this array, in the second for-loop of this algorithm, we don't have to do any swaps at all. In this case, we reduce the runtime of swapping elements from the total runtime. In addition, if we add a boolean variable in the first for-loop to check if there are any swaps happening or nothing at all, we can optimize the Time Complexity to $O(n)$ for the best case.
+If we apply Bubble to this array, in the second for-loop of this algorithm, we don't have to do any swaps at all. In this case, we reduce the runtime of swapping elements from the total runtime. In addition, if we add a boolean variable in the first for-loop to check if there are any swaps happening or nothing at all in the second for-loop, we can optimize the Time Complexity to $O(n)$ for the best case.
 
-For the Insertion Sort, we only need to compare "i"th element with "i - 1"th element for every insertion because "i"th element is always bigger than "i - 1"th element in a ascending array.
+For the Insertion Sort, we only need to compare "i"th element with "i - 1"th element for every insertion because "i"th element is always bigger than "i - 1"th element in a ascending array. In this case, the Time Complexity is reduced to $O(n)$ 
 
 
 #### 3.4 Memory Considerations
