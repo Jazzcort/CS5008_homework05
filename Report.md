@@ -26,7 +26,7 @@ Include the image in your markdown. As a reminder, you save the image in your re
 
 <img src="https://github.com/Jazzcort/CS5008_homework05/blob/main/chart.png" width="600" height="420"> <br>
 
-
+The line of Insertion Sort is overlapping with the line of Selection Sort. Also, the line of Merge Sort is overlapping with the line of Quick Sort.
 
 
 ### 2. Convinced?
