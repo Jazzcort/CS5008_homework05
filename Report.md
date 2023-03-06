@@ -49,15 +49,19 @@ The Bubble Sort introduceed in the class video doesn't check if at least a swap 
 #### 3.2 Worst Case
 Provide example of arrays that generate _worst_ case for Bubble, Selection, Insertion, Merge Sorts
 
-For Selestion and Merge Sort, whether the input array is presorted or not, the Time Complexity stay the same. In other words, there is no worst or best cases for Selection and Merge Sort. Because no matter what case we have, the Time Complexity doesn't change.
+For Selestion Sort, whether the input array is presorted or not, we always need to search the rest of the array entirely for the minimum. Therefore, we have to do same amount of comparisons no matter what kind of case we have. It's meaningless to discuss about the worst and best case for Selection Sort.
 
-The worst case for Bubble and Insertion Sorts would be a sorted array in descending order.
+It's same for Merge sort. Different cases would not affect the Time Complexity of it so I'm not going to discuss about the worst and best case for Merge Sort as well.
+
+The worst case for the rest of the sorting algorithm would be a sorted array in descending order.
 
 For example: 9, 8, 7, 6, 5, 4, 3, 2, 1
 
 If we use Bubble Sort to sort this array, in the second for-loop, we have to swap every two elements since the first element is always bigger than the second element in a descending array.
 
 If we use Insertion Sort, we have to compare the "i"th element from "i - 1"th to the 1st element for every insertion since the elements with bigger index number is smaller than the elements with smaller index number in a descending array.
+
+For Merge Sort, we have to c
 
 #### 3.3 Best Case
 Provide example of arrays that generate _best_ case for Bubble, Selection, Insertion, Merge Sorts 
@@ -81,6 +85,13 @@ Merge > Quick > Bubble = Selection = Insertion
 | Merge | Quick | Bubble |Selection | Insertion |
 | :--: | :--: | :--: | :--: | :--: |
 | $O(n)$ | $O(log(n))$ | $O(1)$ | $O(1)$ | $O(1)$ | 
+
+For Merge Sort, because we need a auxiliary array with the same size as the original array to store the sorted subarrays temporarily, the Space Complexity would be $O(n)$
+
+For Quick Sort, if we unfortunately choose bad pivot every time, the Space Complexity would be $O(n)$ as n recursive calls will be made. However, in average, the Space Complexity would be $O(log(n))$.
+
+For the rest of the sorting algorithm, we're not using any extra memories, so the Space Complexity would be $O(1)$
+
 
 ### 4. Growth of Functions
 Give the following values, place them correctly into *six* categories. Use the bullets, and feel free to cut and paste the full LatexMath we used to generate them.  
