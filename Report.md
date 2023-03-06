@@ -49,17 +49,28 @@ The Bubble Sort introduceed in the class video doesn't check if at least a swap 
 #### 3.2 Worst Case
 Provide example of arrays that generate _worst_ case for Bubble, Selection, Insertion, Merge Sorts
 
-The worst case would be a sorted array in descending order.
+For Selestion and Merge Sort, whether the input array is presorted or not, the Time Complexity stay the same. In other words, there is no worst or best cases for Selection and Merge Sort. Because no matter what case we have, the Time Complexity doesn't change.
+
+The worst case for Bubble and Insertion Sorts would be a sorted array in descending order.
 
 For example: 9, 8, 7, 6, 5, 4, 3, 2, 1
 
+If we use Bubble Sort to sort this array, in the second for loop, we have to swap every two elements since the first element is always bigger than the second element in a descending array.
+
+If we use Insertion Sort, we have to compare the "i"th element from "i - 1"th to the 1st element every time for every insertion since the elements with bigger index number is smaller than the elements with smaller index number in a descending array.
 
 #### 3.3 Best Case
 Provide example of arrays that generate _best_ case for Bubble, Selection, Insertion, Merge Sorts 
 
-The best case would be a sorted array in accending order.
+As what I mentioned above, we're not going to discuss the best case for Selection and Merge Sort.
 
-For example: 1, 2, 3, 4, 5, 6, 7, 8, 9 
+The best case for Bubble and Insertion Sort would be a sorted array in accending order.
+
+For example: 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+If we apply Bubble to this array, in the second for-loop of this algorithm, we don't have to do any swaps at all. In this case, we reduce the runtime of swapping elements from the total runtime. In addition, if we add a boolean variable in the first for-loop to check if there are any swaps happening or nothing at all, we can optimize the Time Complexity to $O(n)$ for the best case.
+
+For the Insertion Sort, we only need to compare "i"th element with "i - 1"th element for every insertion because "i"th element is always bigger than "i - 1"th element in a ascending array.
 
 
 #### 3.4 Memory Considerations
