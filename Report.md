@@ -40,9 +40,9 @@ Build another table that presents the best, worst, and average case for Bubble, 
 
 |  | Bubble | Selection | Insertion | Merge | Quick |
 | :-- | :--: | :--: | :--: | :--: | :--: |
-| Best Case | $O(n^{2})$ | $O(n^{2})$ | $O(n)$ | $O(n\log(n))$ | $O(n\log(n))$ |
-| Worst Case | $O(n^{2})$ | $O(n^{2})$ | $O(n^{2})$ | $O(n\log(n))$ | $O(n\log(n))$ |
-| Average Case | $O(n^{2})$ | $O(n^{2})$ | $O(n^2)$ | $O(n\log(n))$ | $O(n^{2})$ |
+| Best Case | $O(n)$ | $O(n^{2})$ | $O(n)$ | $O(n\log(n))$ | $O(n\log(n))$ |
+| Worst Case | $O(n^{2})$ | $O(n^{2})$ | $O(n^{2})$ | $O(n\log(n))$ | $O(n^{2})$ |
+| Average Case | $O(n^{2})$ | $O(n^{2})$ | $O(n^2)$ | $O(n\log(n))$ | $O(n\log(n))$ |
 
 The Bubble Sort introduceed in the class video doesn't check if at least a swap is done in the second for-loop. So, even if the given array is already sorted, this version of Bubble Sort still run through the whole array. Therefore, the best case time complexity is still $O(n^{2})$
 
