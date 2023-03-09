@@ -61,8 +61,6 @@ If we use Bubble Sort to sort this array, in the second for-loop, we have to swa
 
 If we use Insertion Sort, we have to compare the "i"th element from "i - 1"th to the 1st element for every insertion since the elements with bigger index number is smaller than the elements with smaller index number in a descending array.
 
-For Merge Sort, we have to c
-
 #### 3.3 Best Case
 Provide example of arrays that generate _best_ case for Bubble, Selection, Insertion, Merge Sorts 
 
